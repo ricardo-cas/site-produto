@@ -2,10 +2,122 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    perspective: 1000px;
+}
+
+.container {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+}
+
+.cartao {
+    
+    min-height: 80vh;
+    width: 35rem;
+    border-radius: 30px;
+    padding: 0rem 5rem;
+    box-shadow: 0 20px 20px rgba(0,0, 0, 0.2), 0px 0px 50px rgba(0,0, 0, 0.2);
+    /* background: lightcoral; */
+    /* modificando a borda para ficar redonda */
+    /* Ajustando o conteúdo um pouco para a esquerda */
+    /* Adicionando sombras ao cartão */
+    /* 0 é p eixo X 20 é o eixo y e 20 é a quantidade de sombras desejadas */
+    /* rgba é a cor e o próximo é a opacidade */
+    /* Adicionando mais de uma sombra para um melhor efeito */
+}
+
+
+.sneaker {
+    min-height: 35vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+/* ajustando o tamanho da imagem */
+.sneaker img{
+    width: 20rem;
+    z-index: 2;
+    transition: all 0.75s ease-out;
+}
+
+.circulo {
+    width: 15rem;
+    height: 15rem;
+    /* definindo o gradiente do circulo */
+    background: linear-gradient(
+     to right, 
+     rgba(227, 30, 43, 0.75) ,
+     rgba(99, 110, 125, 0.75)
+    );
+    /* definindo a posição absoluta */
+    position: absolute;
+    /* definindo o formato para redondo */
+    border-radius: 50%;
+    /* definindo a profundidade da imagem*/
+    z-index: 1;
+}
+
+
+.info h1 {
+    font-size: 3rem;
+    transition: all 0.75s ease-out;
+  }
+
+.info h3 {
+    font-size: 1.3rem;
+    padding: 2rem 0rem;
+    color: #585858;
+    font-weight: lighter;
+    transition: all 0.75s ease-out;
+  }
+
+.sizes {
+    display: flex;
+    justify-content: space-between;
+    transition: all 0.75s ease-out;
+}
+
+.sizes button {
+    padding: 0.5rem, 2rem;
+    background: none;
+    border: none;
+    box-shadow: 0px 5px 10px rgba(0,0, 0, 0.2);
+    border-radius: 30px;
+    cursor: pointer;
+    color: #585858;
+    font-weight: bold;
+
+}
+button.ativo{
+    background: #585858;
+    color: white;
 
 }
 
-body{
-    font-family: 'Roboto', sans-serif;
+.comprar{
+    margin-top: 5rem;
+    transition: all 0.75s ease-out;
+}
 
+.comprar button{
+    width: 100%;
+    padding: 1rem 0rem;
+    border: none;
+    background: #E41E2B;
+    color: white;
+    cursor: pointer;
+    border-radius: 30px;
+    font-weight: bolder;
 }
