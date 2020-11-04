@@ -1,4 +1,4 @@
-//Movement Animation to happen
+//Movimento do cartao
 const cartao = document.querySelector(".cartao");
 const container = document.querySelector(".container");
 //Items
@@ -8,13 +8,13 @@ const comprar = document.querySelector(".comprar");
 const description = document.querySelector(".info h3");
 const sizes = document.querySelector(".sizes");
 
-//Moving Animation Event
+//Movendo o item quando o mouse entrar na div
 container.addEventListener("mousemove", (e) => {
   let xAxis = (window.innerWidth / 2 - e.pageX) / 25;
   let yAxis = (window.innerHeight / 2 - e.pageY) / 25;
   cartao.style.transform = `rotateY(${xAxis}deg) rotateX(${yAxis}deg)`;
 });
-//Animate In
+//animação começa
 container.addEventListener("mouseenter", (e) => {
   cartao.style.transition = "none";
   //Popout
@@ -24,7 +24,7 @@ container.addEventListener("mouseenter", (e) => {
   sizes.style.transform = "translateZ(100px)";
   comprar.style.transform = "translateZ(75px)";
 });
-//Animate Out
+//animação termina
 container.addEventListener("mouseleave", (e) => {
   cartao.style.transition = "all 0.5s ease";
   cartao.style.transform = `rotateY(0deg) rotateX(0deg)`;
